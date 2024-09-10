@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks List</title>
+  </head>
+  <body>
+    <h1>Tasks</h1>
+    <ul>
+      {% for task in tasks %}
+      <li>
+        <strong>{{ task.title }}</strong><br />
+        {{ task.description }}<br />
+        Completed: {{ task.completed }}
+      </li>
+      {% empty %}
+      <li>No tasks found.</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
