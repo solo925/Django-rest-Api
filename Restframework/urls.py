@@ -22,4 +22,5 @@ urlpatterns = [
     path('itemapi/',include('Items.urls')),
     path('taskManager/',include('Task_Management_app.urls')),
     path('blog/',include('blog.urls')),
+    path('contacts/',include('Contacts.urls')),
 ]
