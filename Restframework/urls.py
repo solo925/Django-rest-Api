@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('rest_api.urls')),
     path('itemapi/',include('Items.urls')),
-    path('tasks/',include('Task_Management_app.urls')),
+    path('taskManager/',include('Task_Management_app.urls')),
+    path('blog/',include('blog.urls')),
 ]

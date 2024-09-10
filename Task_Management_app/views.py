@@ -3,12 +3,14 @@ from rest_framework import viewsets
 from .models import Task
 from .serializers import TaskSerializer
 import requests
+# from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 
 
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+    # permission_classes = [IsAuthenticatedOrReadOnly]
 
 # If you want to fetch data directly from the API endpoint
 def task_list(request):
